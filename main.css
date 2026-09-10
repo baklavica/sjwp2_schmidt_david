@@ -4,50 +4,44 @@
 
 body {
   font-family: "Segoe UI", Arial, sans-serif;
-  background: #f4f6f8;
+  background: linear-gradient(160deg, #1f2530 0%, #12151c 100%);
   margin: 0;
   padding: 40px 20px;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
+  align-items: flex-start;
 }
 
 .container {
-  background: #ffffff;
+  background: #232a36;
   width: 100%;
   max-width: 600px;
-  border-radius: 12px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-  padding: 32px;
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  padding: 36px;
+  border: 1px solid #2f3848;
 }
 
 h1 {
   text-align: center;
-  color: black;
+  color: #f2f4f8;
   margin-top: 0;
-  margin-bottom: 24px;
-  font-size: 1.6rem;
-}
-
-container-info {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 24px;
-  margin-bottom: 24px;
+  margin-bottom: 28px;
+  font-size: 2.2rem;
 }
 
 h2.student-name {
-  text-align: start;
-  color: #555;
-  max-width: 40%;
+  text-align: center;
+  color: #ccc;
   margin-top: 0;
-  margin-bottom: 32px;
+  margin-bottom: 18px;
   font-size: 1.1rem;
 }
 
 h2.student-year {
-  text-align: start;
-  color: #555;
-  max-width: 40%;
+  text-align: center;
+  color: #ccc;
   margin-top: 0;
   margin-bottom: 32px;
   font-size: 1.1rem;
@@ -66,25 +60,27 @@ ul.zadace-list li {
 ul.zadace-list a {
   display: block;
   text-decoration: none;
-  color: #1a1a1a;
-  background: #f0f2f5;
+  color: #e6e9ef;
+  background: #2c3444;
   padding: 14px 18px;
-  border-radius: 8px;
-  border: 1px solid #e0e3e7;
+  border-radius: 9px;
+  border: 1px solid #3a4356;
   font-weight: 500;
   transition:
     background 0.15s ease,
-    transform 0.1s ease;
+    transform 0.1s ease,
+    border-color 0.15s ease;
 }
 
 ul.zadace-list a:hover {
-  background: #e4e9f0;
+  background: #3a4356;
+  border-color: #5b6b8c;
   transform: translateX(4px);
 }
 
 .empty-note {
   text-align: center;
-  color: #888;
+  color: #7c8494;
   font-size: 0.9rem;
-  margin-top: 20px;
+  margin-top: 22px;
 }
