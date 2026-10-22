@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style class="istaknuto">
+      .kartica {
+        background-color: cadetblue;
+        height: 200px;
+        width: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="kartica">Pozdrav</div>
+    <button class="btn">Pritisni me</button>
+    <script>
+      let css = document.getElementById(".istaknuto");
+      let kartica = document.getElementById(".kartica");
+      let btn = document.getElementById(".btn");
+
+      btn.onclick = function () {
+        kartica.classList.toggle("istaknuto");
+      };
+    </script>
+  </body>
+</html>

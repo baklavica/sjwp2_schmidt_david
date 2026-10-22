@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p class="paragraf"></p>
+    <button class="button1">Prikaži poruku</button>
+    <script>
+      let button = document.querySelector(".button1");
+      let paragraf = document.querySelector(".paragraf");
+
+      button.onclick = function () {
+        paragraf.textContent = "Uspješno ste kliknuli gumb!";
+      };
+    </script>
+  </body>
+</html>

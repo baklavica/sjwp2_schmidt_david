@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="par">Nemojte kliknuti gumb</p>
+    <button id="btn">Gumb</button>
+    <script>
+      btn = document.getElementById("btn");
+      par = document.getElementById("par");
+
+      btn.onclick = function () {
+        par.style.color = "red";
+        par.style.backgroundColor = "yellow";
+        par.style.fontWeight = "bold";
+      };
+    </script>
+  </body>
+</html>
