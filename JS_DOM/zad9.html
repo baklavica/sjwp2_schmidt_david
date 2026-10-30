@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto explicabo voluptatum atque dignissimos error distinctio quos? Ipsa eius pariatur tempora tempore exercitationem praesentium cumque blanditiis, ab nobis provident obcaecati. Quae!</p>
+    <button>Pozdrav</button>
+    <script>
+        let p = document.querySelector("p");
+        let btn = document.querySelector("button");
+
+        p.style.display = "block";
+
+        btn.onclick = function() {
+            if(p.style.display === "block"){
+                p.style.display = "none";
+            }
+            else{
+                p.style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>

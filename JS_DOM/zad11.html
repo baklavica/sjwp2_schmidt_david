@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="https://www.index.hr/">Index</a>
+    <button>klik</button>
+    <script>
+        let link = document.querySelector("a");
+        let btn = document.querySelector("button");
+
+        btn.onclick = function() {
+            link.setAttribute("href", "https://www.youtube.com/");
+            link.textContent = "Youtube";
+        }
+    </script>
+</body>
+</html>
