@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            height: 100px;
+            width: 100px;
+        }
+        btn {
+            height: 50px;
+            width: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <p id="prikaz"></p>
+    <button id="sum">+</button>
+    <button id="minus">-</button>
+    <button id="multiply">*</button>
+    <button id="divide">/</button>
+    
+    <script>
+
+        let sum = document.getElementById("sum");
+        let minus = document.getElementById("minus");
+        let multiply = document.getElementById("multiply");
+        let divide = document.getElementById("divide");
+
+        let x = Number(prompt("unesite 1. broj: "));
+        let y = Number(prompt("unesite 2. broj: "));
+
+        function izvrsi(a, b, operacija) {
+            return operacija(a, b);
+        }
+
+        function zbroji(a, b){return a+b;}
+        function razlika(a, b){return a-b;}
+        function umnozak(a, b){return a*b;}
+        function kolicnik(a, b) {
+            if(b === 0){
+                alert("nemozemo dijeliti s nulom");
+            }
+            else { return a/b; }
+        }
+
+
+        sum.addEventListener("click", function(){prikaz.textContent = izvrsi(x, y, zbroji);})
+        minus.addEventListener("click", function(){prikaz.textContent = izvrsi(x, y, razlika);})
+        multiply.addEventListener("click", function(){prikaz.textContent = izvrsi(x, y, umnozak);})
+        divide.addEventListener("click", function(){prikaz.textContent = izvrsi(x, y, kolicnik);})
+
+
+    </script>
+
+</body>
+</html>

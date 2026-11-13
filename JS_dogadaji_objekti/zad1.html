@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            height: 100px;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    
+    <button id="btn1">+</button>
+    <button id="btn2">-</button>
+    <button id="reset">Reset</button>
+
+    <p id="broj"></p>
+
+    <script>
+
+        let gumb1 = document.getElementById("btn1");
+        let gumb2 = document.getElementById("btn2");
+        let reset = document.getElementById("reset");
+        let prikaz = document.getElementById("broj");
+
+        let broj = 0;
+
+        function plus() {
+            broj += 1;
+            prikaz.textContent = broj;
+        }
+        function minus() {
+            broj -= 1;
+            prikaz.textContent = broj;
+            if(broj == -1) { alert("Broj je negativan"); }
+        }
+        function pocetak() {
+            broj = 0;
+            prikaz.textContent = broj;
+        }
+
+        gumb1.addEventListener("click", plus);
+        gumb2.addEventListener("click", minus);
+        reset.addEventListener("click", pocetak);
+
+    </script>
+</body>
+</html>
