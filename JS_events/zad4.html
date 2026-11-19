@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p></p>
+    <button class="btnSvi">Prikaži sve proizvode</button>
+    <button class="btnSkuplji">Prikaži skuplje od 50 eura</button>
+
+    <script>
+      let p = document.querySelector("p");
+      class Proizvod {
+        constructor(naziv, cijena, kategorija, stanjeZalihe) {
+          this.naziv = naziv;
+          this.cijena = cijena;
+          this.kategorija = kategorija;
+          this.stanjeZalihe = stanjeZalihe;
+        }
+      }
+
+      let stvari = [
+        new Proizvod("PC", 1590, "ElektroničkiUređaj", "8"),
+        new Proizvod("IPhone", 870, "ElektroničkiUređaj", "70"),
+        new Proizvod("Miš", 40, "ElektroničkiUređaj", "113"),
+        new Proizvod("Tipkovnica", 50, "ElektroničkiUređaj", "23"),
+        new Proizvod("Slušalice", 30, "ElektroničkiUređaj", "57"),
+        new Proizvod("Web kamera", 90, "ElektroničkiUređaj", "18"),
+      ];
+
+      let buttonSvi = document.querySelector(".btnSvi");
+      buttonSvi.addEventListener("click", function () {
+        p.innerHTML = "";
+
+        stvari.forEach(function (proizvod) {
+          p.innerHTML +=
+            "Naziv: " +
+            proizvod.naziv +
+            "<br>" +
+            "Cijena: " +
+            proizvod.cijena +
+            " eura <br>Kategorija: " +
+            proizvod.kategorija +
+            "<br>Zaliha(kom): " +
+            proizvod.stanjeZalihe +
+            "<br><br>";
+        });
+      });
+
+      let buttonSkuplji = document.querySelector(".btnSkuplji");
+      buttonSkuplji.addEventListener("click", function () {
+        p.innerHTML = "";
+
+        let skuplji = stvari.filter((Proizvod) => Proizvod.cijena > 50);
+
+        skuplji.forEach(function (proizvod) {
+          p.innerHTML +=
+            "Naziv: " +
+            proizvod.naziv +
+            "<br>" +
+            "Cijena: " +
+            proizvod.cijena +
+            " eura <br>Kategorija: " +
+            proizvod.kategorija +
+            "<br>Zaliha(kom): " +
+            proizvod.stanjeZalihe +
+            "<br><br>";
+        });
+      });
+    </script>
+  </body>
+</html>
