@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        .kartica {
+            display: grid;
+            background-color: salmon;
+            font-family: Arial, Helvetica, sans-serif;
+            width: 500px;
+            height: 700px;
+        }
+        h1 {
+            font-size: 64px;
+            color: darkred;
+        }
+        #unos {
+            border-radius: 10px;
+            height: 50px;
+            width: 125px;
+        }
+    </style>
+
+</head>
+<body>
+    
+    <div class="kartica">
+        <h1>LETTER COUNTER</h1>
+        <input type="text" name="unos" id="unos" placeholder="Unesi...">
+        <p class="prikaz">Broj slova: </p>
+    </div>
+
+    <script>
+
+        let unos = document.querySelector("#unos");
+        let p = document.querySelector(".prikaz");
+        
+        unos.addEventListener("input", function(){
+            p.textContent = "Broj slova: " + unos.value.length;
+        })
+
+    </script>
+
+</body>
+</html>

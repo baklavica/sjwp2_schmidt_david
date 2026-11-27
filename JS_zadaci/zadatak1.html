@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        .kartica {
+            display: grid;
+            background-color: salmon;
+            font-family: Arial, Helvetica, sans-serif;
+            width: 500px;
+            height: 700px;
+        }
+
+        .promjeni {
+            background-color: aqua;
+        }
+
+        h1 {
+            font-size: 64px;
+            color: darkred;
+        }
+        button {
+            border-radius: 10px;
+            background-color: black;
+            color: white;
+            height: 50px;
+            width: 125px;
+        }
+    </style>
+
+</head>
+<body>
+    
+    <div class="kartica">
+        <h1>BACKGROUND COLOR CHANGER</h1>
+        <button class="btn">CHANGE BACKGROUNG</button>
+    </div>
+    
+    <script>
+
+        let btn = document.querySelector(".btn");
+        let background = document.querySelector(".kartica");
+
+        btn.onclick = function () {
+            background.classList.toggle("promjeni");
+        }
+
+    </script>
+
+</body>
+</html>
